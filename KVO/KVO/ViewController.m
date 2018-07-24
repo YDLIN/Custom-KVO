@@ -21,6 +21,10 @@
     Person *p = [[Person alloc] init];
 //    [p addObserver:self forKeyPath:@"money" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     [p ot_addObserver:self forKeyPath:@"money" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    /*
+     如果不重写class,这里是返回OTKVONotifying_Person
+     */
+    NSLog(@"%@",[p class]);
     _p = p;
 }
 
